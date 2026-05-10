@@ -566,7 +566,7 @@
 <div id="gamePage" class="page game-page hidden">
   <div class="game-header">
     <h2 class="game-title">The Challenge</h2>
-    <p class="game-sub">Answer all 3 questions correctly</p>
+    <p class="game-sub">Answer all 5 questions correctly</p>
   </div>
   <div class="game-progress">
     <p class="game-progress-label" id="gameProgress">Question 1 / 3</p>
@@ -771,12 +771,13 @@ let noCount = 0, afterDismiss = null, noGone = false;
 
 const popups = [
   { h:'Maybe press the button harder.',          p:'Come on. You can do it.',                              btn:'Okay, noted.'         },
+  { h:'Mom.',                                    p:'Brett is an excellent coach. One month. That is it.',  btn:'Noted. Still no.'     },
   { h:'You could be in better shape than Dad.', p:'We will not tell him.',                               btn:'That is fair, but no.' }
 ];
 
 const wanders = [
   { instant:true, top:'50%',    right:'10px', left:'auto',  bottom:'auto',  tx:'translateY(-50%)',     text:'No thank you' },
-  {               top:'62px',   left:'10px',  right:'auto', bottom:'auto',  tx:'none',                 text:'Still no.'   },
+  { popup:2,      top:'62px',   left:'10px',  right:'auto', bottom:'auto',  tx:'none',                 text:'Still no.'   },
   {               bottom:'76px',right:'10px', top:'auto',   left:'auto',    tx:'none',                 text:'No.'         },
   {               top:'62px',   right:'10px', left:'auto',  bottom:'auto',  tx:'none',                 text:'Nope.'       },
   {               bottom:'76px',left:'10px',  right:'auto', top:'auto',     tx:'none',                 text:'No!'         },
@@ -863,7 +864,17 @@ const quizQuestions = [
     correct: 1
   },
   {
-    q: 'Are you sure you don’t want padel lessons?',
+    q: 'What was the name of our first dive instructor?',
+    options: ['Marco', 'Diego', 'Nico', 'Luis'],
+    correct: 2
+  },
+  {
+    q: 'How many of my school teachers did I make cry?',
+    options: ['5', '2', '8', '3'],
+    correct: 1
+  },
+  {
+    q: 'Are you sure you don’t want padel lessons?',
     options: ['Yes', 'No'],
     correct: 1
   },
